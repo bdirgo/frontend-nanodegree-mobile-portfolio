@@ -8,10 +8,10 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/print.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- <link href="css/print.css" rel="stylesheet"> -->
 
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -21,8 +21,8 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
-    <script async src="js/perfmatters.js"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <script max-age=86400 async src="js/perfmatters.js"></script>
   </head>
 
   <body>
@@ -63,9 +63,28 @@
           </li>
         </ul>
     </div>
-
+	<script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'css/style.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
+    <script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'css/print.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
     <footer>
-      <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+      <p>&copy; Web Performance 2016 <span id="crp-stats"></span></p>
     </footer>
   </body>
 </html>
