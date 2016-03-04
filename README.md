@@ -1,12 +1,15 @@
 ## Website Performance Optimization portfolio project
 
-This is a submission for the Web Development Udacity nanodegree. If you wish to run look at this website on your own machine, you can either download this code or look at the finished site on the github pages branch. The link for the github pages branch is [here](http://bdirgo.github.io/frontend-nanodegree-mobile-portfolio/). If you wish to run the code on your machine follow the steps below.
-
 ### Getting started
 
-####Some useful tips to help you get started
+This is a submission for the Web Development Udacity nanodegree. There are two ways to run this code.
 
-1. Check out the repository
+1. The easiest way to run this code is to visit this link [here](http://bdirgo.github.io/frontend-nanodegree-mobile-portfolio/).
+1. If you wish to run the code on your own machine follow the steps below.
+
+####To run the code after downloading it
+
+1. Download/Fork the repository
 1. To inspect the site on your phone, you can run a local server
 
   ```bash
@@ -15,24 +18,22 @@ This is a submission for the Web Development Udacity nanodegree. If you wish to 
   ```
 
 1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely. Add the ngrok program to your project folder.
+1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely. Add the 'ngrok' program file to your project folder.
 
   ``` bash
-  $> cd /path/to/your-project-folder
   $> ./ngrok http 8080
   ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+### Optimizations to this particular Fork
 
-Good luck!
-
-### Changes to this particular Fork
-
-1. Using PageSpeed, downlaoded and replaced optimized versions of the CSS and images with the index.html
-2. Optimized how CSS gets loaded, using suggestion by Google Developers to have the CSS loaded inline on the index.html
-3. Optimized the pizza.html page by looking at the javascript that is loaded and separating out document calls out of for loops, used getElementById when nessasary to speed things up, and reduce number of functions called when the slider is used.
+1. Using PageSpeed, downlaoded and replaced optimized versions of the CSS and images with the index.html, and optimized how CSS gets loaded, using suggestion by Google Developers to have the CSS loaded inline on the index.html
+1. Optimized the pizza.html page by separating out 'document.' calls out of for loops, used getElementById when nessasary to speed things up, and reduce number of functions called when the slider is used.
 
 ### Optimization Tips and Tricks
+
+Here is a list of a whole bunch of links that I don't want to delete.
+
+* [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
 * [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
